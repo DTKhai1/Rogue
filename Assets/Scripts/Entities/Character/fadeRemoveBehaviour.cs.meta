@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 7ac580584a7b5884789425eb4a06b10b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - heartDrop: {fileID: 4783490948962325728, guid: 7619dd47f529a284ab8d928e72c064aa, type: 3}
+  - uiManager: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

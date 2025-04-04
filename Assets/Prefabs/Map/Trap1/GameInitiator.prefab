@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5651421499636423520
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 837018189490032037}
+  - component: {fileID: 7952194784245339958}
+  m_Layer: 0
+  m_Name: GameInitiator
+  m_TagString: GameInitiator
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &837018189490032037
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5651421499636423520}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.898401, y: 3.8287575, z: -9.167606}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7952194784245339958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5651421499636423520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77fe4e87d665f584cb99f94a4599f13b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mainCamera: {fileID: 3739746001684475689, guid: db5e0a029b065334586677285643dd48, type: 3}
+  vCam: {fileID: 5544413020696746001, guid: c1b97a645d6a86a4680e9e221eedd2d0, type: 3}
+  _eventSystem: {fileID: 7226189334293277494, guid: f22dddaf3e6bb2e4ea0a33de08c7c3e2, type: 3}
+  _playerSpawner: {fileID: 7034959111549607959, guid: b642a2da3305f994abbb43ba28e1f07c, type: 3}
+  _combatPortal: {fileID: 6562598081552535385, guid: 907ca1ae71819f249ab8f6d232440c09, type: 3}
+  _occurPortal: {fileID: 8492639278355543250, guid: 0cc5c3e62c849ce449526acb9094fc4e, type: 3}
+  _shopPortal: {fileID: 5905954617601643870, guid: 2134671d78a4c8d4f9584b7f51bee14f, type: 3}
+  _map: {fileID: 3383981291795884404, guid: 47f4aeecdf99c2d4a8721af1d1871f5e, type: 3}
+  _chest: {fileID: 5388238272332177824, guid: c45dd621349746f458c4b8c18fd98dd0, type: 3}
+  UI: {fileID: 1916294452985229616, guid: 98ce400bbba094e4c9fbe4f24fc3c6b5, type: 3}
+  _playerStats: {fileID: 11400000, guid: 41212740ae6fbaf41b605875c57a09b8, type: 2}

@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ground
+  - Platform
+  - KillCountText
+  - Enemy
+  - GameManager
+  - Portal
+  - GameInitiator
+  - LimitCol
   layers:
   - Default
   - TransparentFX
@@ -11,21 +19,21 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Attackable
+  - Ground
+  - PlayerHitBox
+  - EnemyHitBox
+  - Player
+  - Enemy
+  - GroundDetection
+  - Pickup
+  - Wall
+  - Spawn
+  - EnemyProjectile
+  - Platform
+  - Interactable
+  - Trap
+  - LimitCol
   - 
   - 
   - 
@@ -38,6 +46,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 4226826613
+    locked: 0
+  - name: Ground
+    uniqueID: 2180559871
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

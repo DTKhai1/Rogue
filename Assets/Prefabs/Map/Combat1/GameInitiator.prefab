@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2633713099675799447
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4719205800984681582}
+  - component: {fileID: 8055112287549079339}
+  m_Layer: 0
+  m_Name: GameInitiator
+  m_TagString: GameInitiator
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4719205800984681582
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2633713099675799447}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 20.18034, y: 6.01121, z: 0.38926527}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8055112287549079339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2633713099675799447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c320a19a29ec390418685a0e00fa1917, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mainCamera: {fileID: 3739746001684475689, guid: db5e0a029b065334586677285643dd48, type: 3}
+  vCam: {fileID: 5544413020696746001, guid: c1b97a645d6a86a4680e9e221eedd2d0, type: 3}
+  _eventSystem: {fileID: 7226189334293277494, guid: f22dddaf3e6bb2e4ea0a33de08c7c3e2, type: 3}
+  _playerSpawner: {fileID: 5216796856373436434, guid: b86e427329e726341b73b7df95cda89d, type: 3}
+  _enemySpawners: {fileID: 5355369078782577466, guid: 872be0223c9a92c4b911e8727f31cce4, type: 3}
+  _combatPortal: {fileID: 4928722546017386950, guid: e2ec29bc4df9510438ae24539d146e42, type: 3}
+  _occurPortal: {fileID: 8343496290526903500, guid: 10f85c3657454c44b99887c6b3c0e042, type: 3}
+  _shopPortal: {fileID: 1274549091682740489, guid: bb4250e6bd8a6284f8fca111051cf552, type: 3}
+  _map: {fileID: 685516681980476900, guid: bdbc25a20281d0a49a029fa6224ece11, type: 3}
+  UI: {fileID: 1916294452985229616, guid: 98ce400bbba094e4c9fbe4f24fc3c6b5, type: 3}
+  _chest: {fileID: 4805739746869179567, guid: a984cda6094068349a1b2a87e2078bf0, type: 3}
+  _playerStats: {fileID: 11400000, guid: 41212740ae6fbaf41b605875c57a09b8, type: 2}

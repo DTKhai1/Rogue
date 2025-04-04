@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DungeonPlatformerAssetPackV1.32_0
+      name: Ceiling_wall
       rect:
         serializedVersion: 2
-        x: 529
-        y: 1705
-        width: 126
-        height: 126
+        x: 664
+        y: 1800
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: be56d09892441304dbeb300b605aead6
-      internalID: 1703069457
+      spriteID: 7c44c9f0c781e1e45999908bfa3e1839
+      internalID: -765922439
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DungeonPlatformerAssetPackV1.32_1
+      name: coin1
       rect:
         serializedVersion: 2
-        x: 568
-        y: 1689
-        width: 7
-        height: 6
+        x: 1432
+        y: 1696
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,881 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36ffdd0b2f250094eac1515062a4eca9
-      internalID: -1281270027
+      spriteID: 985e67fd4ce8fbb49b4b976930e8f133
+      internalID: -1311447697
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DungeonPlatformerAssetPackV1.32_2
+      name: coin2
       rect:
         serializedVersion: 2
-        x: 665
-        y: 1761
+        x: 1432
+        y: 1664
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55890203ffb3e4a40a05a306e6409186
+      internalID: 394837215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin3
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 1631
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 014d67a2ffe68f048ba34569924b3619
+      internalID: 2119232742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin4
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 1599
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ed0d0052f12022448c4dec924912ea8
+      internalID: 282237441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin5
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 1567
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4897e1b75655ec45baec1b7f40f345f
+      internalID: 1370491412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin6
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 1536
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12d1da0489bd3384f8cf3d7402e3a727
+      internalID: 750542375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin7
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 1505
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a260dec1abb7e0348b2e7d481ae9d9ba
+      internalID: -987063427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coin8
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 1471
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3da4b5704b80344aa7f8884f990b63c
+      internalID: -544462946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doorToBoss1
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 1416
+        width: 8
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 053d683201acc8e45b6b97f2a037ce97
+      internalID: 993000635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doorToBoss2
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 1416
+        width: 14
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eba4d746d3eb0c94f95721ba918643c7
+      internalID: -797392679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doorToBoss3
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 1416
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5120b329d2af4c04fafb959860131bb2
+      internalID: -204811455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: doorToBoss4
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 1416
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d66c8bac727bbe444ae1d43ca3fd1f62
+      internalID: 489005936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall1
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 1288
         width: 30
-        height: 30
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e81b439e07ee0d428cb38b1a33c3fcd
+      internalID: 476686253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall2
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 1288
+        width: 30
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d63f9da257e970b4d8bd52aa9ffabab9
+      internalID: 2073693108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall3
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 1288
+        width: 30
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e01eb4070625aa489962cb74fb6ca01
+      internalID: -1477604137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall4
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 1288
+        width: 30
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26f0c569160edbf43a557e7710ea252e
+      internalID: 885718989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall5
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 1288
+        width: 30
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a496c34cf1ecc4d4eb25d6f32d036fa7
+      internalID: -1868792055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall6
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 1288
+        width: 30
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73eb09444669a3f47a11df0bb69c0ef8
+      internalID: 1419468831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall7
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 1288
+        width: 30
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc616717532b4c41890ae0bcea2e91b
+      internalID: -603323069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall8
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 1176
+        width: 30
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5233b23ebc4bc794f9251b825e831a11
+      internalID: -486528132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: waterfall9
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 1176
+        width: 30
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 333757a9969d4bf4587cc67dfaf25d1f
+      internalID: -313937240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: candle
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 776
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62255ead628b61c40ae8d35241cfe1de
+      internalID: 94188284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Platform
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 1552
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db8a53f786ab0574ea59fb48464d6d55
+      internalID: -2044972397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeartDrop1
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 1713
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bba9fa9e503c1d4e820b7cb9a43c37c
+      internalID: 1677017116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeartDrop2
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 1697
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb7c03a3d74196c48b0abd138475a685
+      internalID: 1463297843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeartDrop3
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 1681
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c91a50ea90daf344982e3ece86fe51d7
+      internalID: -1020111904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeartDrop4
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 1665
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff6d8d7755fab1c4d876580f45e82bba
+      internalID: -2111311149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Life_Full
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 1520
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dae7bdb881ac83541aeec93c89251777
+      internalID: -603287916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Life_Half
+      rect:
+        serializedVersion: 2
+        x: 1352
+        y: 1520
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ed42b60e0337834ea47d6ee8afbf597
+      internalID: 258557546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Life_None
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 1520
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38f46de7675d9314da6d60e9c26616b3
+      internalID: -1366513060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 1688
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 778bb8bfed9e812458710f775a1c8e66
+      internalID: 2103932129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corner
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 1528
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3421e36e22382b409c63abb0f41a792
+      internalID: 340273768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BackGroundWall
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 1704
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f71e1550183739941a131591a05656bd
+      internalID: 1539097061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground_Left
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 1704
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcd07aedfc99a4446bbff30732dd1788
+      internalID: -941256163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground_Mid
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 1704
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b64eccd6e8ac874e8835cf5c5ec7867
+      internalID: 822143553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ground_Right
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 1704
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e09149acc3c23343b52f497862830c2
+      internalID: 854138923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_wall
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 1696
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6546feeab779be94993618aeda0d0e8d
+      internalID: 1609911349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ceiling_Right
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 1688
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdfe60d5aa0298b4ab9d60651db71ad9
+      internalID: 911032885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ceiling_Left
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 1688
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40437fea6524e784ead51a38a181cd52
+      internalID: -1265138594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall_Left
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 1696
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4cdf65bc2e65d34bb0f140ff8b88b07
+      internalID: -928204544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wall_Right
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 1696
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5de7adf479a3fb8408f4af62e8b12c37
+      internalID: 199103928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ceiling_Mid
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 1688
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4feba4a31f9c3054f9d3abb23669f42f
+      internalID: -963838123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shop_Front
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 568
+        width: 119
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,8 +1027,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c402594cf9604bc4facd488cc86adfe1
-      internalID: 440545060
+      spriteID: c4acdf52f5ac1bb448403b545bfdf98f
+      internalID: 922010482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopDeskBack
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 56
+        width: 79
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34b2fdc048445fc46b912fd2f8cbdea2
+      internalID: 47964530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ShopAlchemistTable
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 55
+        width: 35
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20049a171e28a9548ad5349d874de57b
+      internalID: -257853101
       vertices: []
       indices: 
       edges: []
@@ -183,9 +1086,55 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DungeonPlatformerAssetPackV1.32_0: 1703069457
-      DungeonPlatformerAssetPackV1.32_1: -1281270027
-      DungeonPlatformerAssetPackV1.32_2: 440545060
+      BackGroundWall: 1539097061
+      BackgroundWall: 1703069457
+      Ceiling_Left: -1265138594
+      Ceiling_Mid: -963838123
+      Ceiling_Right: 911032885
+      Ceiling_wall: -765922439
+      Corner: 340273768
+      Floor_wall: 1609911349
+      GroundWall: -269597170
+      Ground_Left: -12235892
+      Ground_Mid: 822143553
+      Ground_Right: 854138923
+      HeartDrop1: 1677017116
+      HeartDrop2: 1463297843
+      HeartDrop3: -1020111904
+      HeartDrop4: -2111311149
+      Life_Full: -603287916
+      Life_Half: 258557546
+      Life_None: -1366513060
+      Platform: -2044972397
+      ShopAlchemistTable: -257853101
+      ShopDeskBack: 47964530
+      Shop_Front: 922010482
+      Wall: 2103932129
+      Wall_Left: -928204544
+      Wall_Right: 199103928
+      candle: 94188284
+      coin1: -1311447697
+      coin2: 394837215
+      coin3: 2119232742
+      coin4: 282237441
+      coin5: 1370491412
+      coin6: 750542375
+      coin7: -987063427
+      coin8: -544462946
+      doorToBoss1: 993000635
+      doorToBoss2: -797392679
+      doorToBoss3: -204811455
+      doorToBoss4: 489005936
+      square: 1861653912
+      waterfall1: 476686253
+      waterfall2: 2073693108
+      waterfall3: -1477604137
+      waterfall4: 885718989
+      waterfall5: -1868792055
+      waterfall6: 1419468831
+      waterfall7: -603323069
+      waterfall8: -486528132
+      waterfall9: -313937240
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

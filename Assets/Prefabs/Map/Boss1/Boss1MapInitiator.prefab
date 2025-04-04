@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &447849953154090670
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6189365273725718693}
+  - component: {fileID: 4877280102293594884}
+  m_Layer: 0
+  m_Name: Boss1MapInitiator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6189365273725718693
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447849953154090670}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.2922378, y: 3.7934546, z: -0.7459169}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4877280102293594884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447849953154090670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c228437f971ec3499ed90b60b064d49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mainCamera: {fileID: 3739746001684475689, guid: db5e0a029b065334586677285643dd48, type: 3}
+  vCam: {fileID: 5544413020696746001, guid: c1b97a645d6a86a4680e9e221eedd2d0, type: 3}
+  _eventSystem: {fileID: 7226189334293277494, guid: f22dddaf3e6bb2e4ea0a33de08c7c3e2, type: 3}
+  _playerSpawner: {fileID: 1478480209515570967, guid: 11ae98d4ccfb083419153b7ad079beca, type: 3}
+  _boss: {fileID: 5809026159060081810, guid: e2443b1729c9a614ab3dee74df5c6a35, type: 3}
+  _map: {fileID: 7383478043521621908, guid: c6870188c83ed4e498c47a979397e788, type: 3}
+  _playerHealthUI: {fileID: 1916294452985229616, guid: 98ce400bbba094e4c9fbe4f24fc3c6b5, type: 3}
+  _victoryUI: {fileID: 4128895607952676500, guid: 8c3ce2ddbe77d0146a0835a4444b7e9c, type: 3}
+  _playerStats: {fileID: 11400000, guid: 41212740ae6fbaf41b605875c57a09b8, type: 2}
