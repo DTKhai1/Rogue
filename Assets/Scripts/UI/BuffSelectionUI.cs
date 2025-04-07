@@ -17,13 +17,11 @@ public class BuffSelectionUI : MonoBehaviour
 
     private GameManager gameManager;
     private GameObject gameInitiator;
-    AudioManager audio;
     private void Awake()
     {
         availableBuffs = new List<Buff>(buffList.allBuffs);
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         gameInitiator = GameObject.FindGameObjectWithTag("GameInitiator");
-        audio = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     private void OnEnable()
@@ -64,7 +62,7 @@ public class BuffSelectionUI : MonoBehaviour
 
     private void SelectBuff(int index)
     {
-        audio.PlaySFX(audio.onClick);
+        gameManager.audioManager.PlaySFX(gameManager.audioManager.onClick);
         if (index >= 0 && index < currentOptions.Count)
         {
             player.AddBuff(currentOptions[index]);

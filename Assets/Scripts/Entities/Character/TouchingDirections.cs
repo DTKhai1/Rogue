@@ -11,7 +11,7 @@ public class TouchingDirections : MonoBehaviour
     public float wallDistance = 0.05f;
 
     Collider2D touchingCol;
-    private Rigidbody2D rb;
+    Rigidbody2D rb;
     
     Animator animator;
 
@@ -56,16 +56,16 @@ public class TouchingDirections : MonoBehaviour
     {
         touchingCol = GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    private void Start()
-    {
-        rb = transform.gameObject.GetComponent<Rigidbody2D>();
-    }
     // Update is called once per frame
     void FixedUpdate()
     {
-        IsGrounded = touchingCol.Cast(Vector2.down, groundCastFilter, groundHits, groundDistance) > 0;
+        if(Mathf.Abs(rb.velocity.y) < 0.1f)
+        {
+            IsGrounded = touchingCol.Cast(Vector2.down, groundCastFilter, groundHits, groundDistance) > 0;
+        }else IsGrounded = false;
         IsOnWall = touchingCol.Cast(wallCheckDirection, wallCastFilter, wallHits, wallDistance) > 0;
     }
 

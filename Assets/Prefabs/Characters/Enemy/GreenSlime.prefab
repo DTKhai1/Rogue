@@ -557,6 +557,8 @@ MonoBehaviour:
     maxNormalAngle: 0
   groundDistance: 0.05
   wallDistance: 0.05
+  groundCheckYOffset: 0
+  touchingCol: {fileID: 7370681745157454179}
   _isGrounded: 1
   _isOnWall: 0
   isOnPlatform: 0
@@ -588,6 +590,9 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   healthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  _onAttackEffects:
     m_PersistentCalls:
       m_Calls: []
   baseHealth: 30
