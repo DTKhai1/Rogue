@@ -1161,7 +1161,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7717605631519110677}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: TurnOffSound
+        m_MethodName: ToggleSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3376,6 +3376,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5371728314002927414}
   - component: {fileID: 3840630469333556153}
+  - component: {fileID: 9196020514923309330}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -3419,6 +3420,18 @@ MonoBehaviour:
   enemyManager: {fileID: 11400000, guid: de05de40be41ae84c8e025ab1a369b18, type: 2}
   levelManager: {fileID: 11400000, guid: f060790dd76792049889809a642f9e2d, type: 2}
   audioManager: {fileID: 7717605631519110677}
+--- !u!114 &9196020514923309330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8013896237145280720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ade0169b4824b4045bd016d8a79b588a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8529451120110686141
 GameObject:
   m_ObjectHideFlags: 0

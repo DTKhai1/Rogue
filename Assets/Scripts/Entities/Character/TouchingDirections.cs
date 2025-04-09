@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class TouchingDirections : MonoBehaviour
+public class TouchingDirections : MonoBehaviour, IFixedUpdateObserver
 {
     public ContactFilter2D groundCastFilter, wallCastFilter;
 
@@ -59,8 +59,16 @@ public class TouchingDirections : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+    private void OnEnable()
+    {
+        UpdateManager.RegisterFixedUpdateObserver(this);
+    }
+    private void OnDisable()
+    {
+        UpdateManager.UnregisterFixedUpdateObserver(this);
+    }
     // Update is called once per frame
-    void FixedUpdate()
+    public void ObservedFixedUpdate()
     {
         if(Mathf.Abs(rb.velocity.y) < 0.1f)
         {

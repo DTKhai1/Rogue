@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Enemy : MonoBehaviour, Damageable
+public class Enemy : MonoBehaviour, Damageable, IUpdateObserver
 {
     public UnityEvent<int, Vector2> damageableHit;
     public UnityEvent<int, int> healthChanged;
@@ -93,8 +93,16 @@ public class Enemy : MonoBehaviour, Damageable
         Health = MaxHealth;
 
     }
+    private void OnEnable()
+    {
+        UpdateManager.RegisterUpdateObserver(this);
+    }
+    private void OnDisable()
+    {
+        UpdateManager.UnregisterUpdateObserver(this);
+    }
 
-    private void Update()
+    public void ObservedUpdate()
     {
         if (isInvisible)
         {

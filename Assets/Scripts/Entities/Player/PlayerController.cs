@@ -1,6 +1,5 @@
-using System;
+
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,7 +8,7 @@ public interface IInteractable
     public void Interact();
 }
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IFixedUpdateObserver
 {
     public float walkSpeed = 5f;
     public float dashSpeed = 20f;
@@ -104,8 +103,15 @@ public class PlayerController : MonoBehaviour
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
     }
 
-
-    private void FixedUpdate()
+    private void OnEnable()
+    {
+        UpdateManager.RegisterFixedUpdateObserver(this);
+    }
+    private void OnDisable()
+    {
+        UpdateManager.UnregisterFixedUpdateObserver(this);
+    }
+    public void ObservedFixedUpdate()
     {
         if (_isDashing)
             return;
@@ -220,4 +226,5 @@ public class PlayerController : MonoBehaviour
             gameManager.ChangeState(GameState.Pause);
         }
     }
+
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Knight : MonoBehaviour
+public class Knight : MonoBehaviour, IUpdateObserver, IFixedUpdateObserver
 {
     public float moveSpeed = 3f;
     public DetectionZone attackZone;
@@ -91,8 +91,18 @@ public class Knight : MonoBehaviour
         animator = GetComponent<Animator>();
         damageable = GetComponent<Enemy>();
     }
+    private void OnEnable()
+    {
+        UpdateManager.RegisterUpdateObserver(this);
+        UpdateManager.RegisterFixedUpdateObserver(this);
+    }
+    private void OnDisable()
+    {
+        UpdateManager.UnregisterUpdateObserver(this);
+        UpdateManager.UnregisterFixedUpdateObserver(this);
+    }
 
-    void Update()
+    public void ObservedUpdate()
     {
         notNextToCliff = cliffDetectionZone.detectedColliders.Count > 0;
         FoundPlayer = playerDetectionZone.detectedColliders.Count > 0;
@@ -102,7 +112,7 @@ public class Knight : MonoBehaviour
             AttackCooldown -= Time.deltaTime;
         }
     }
-    private void FixedUpdate()
+    public void ObservedFixedUpdate()
     {
         if (!damageable.LockVelocity)
         {
@@ -129,11 +139,11 @@ public class Knight : MonoBehaviour
             {
                 if (FoundPlayer)
                 {
-                    rb.velocity = Vector2.zero;
-                    transform.position = Vector2.MoveTowards(this.transform.position, new Vector2(player.transform.position.x, this.transform.position.y), moveSpeed * Time.deltaTime);
+                    Vector2 newPos = Vector2.MoveTowards(this.transform.position, new Vector2(player.transform.position.x, this.transform.position.y), moveSpeed * Time.deltaTime);
+                    rb.MovePosition(newPos);
                 }
                 else
-                    rb.velocity = new Vector2(moveSpeed  * walkDirectionVector.x, rb.velocity.y);
+                    rb.velocity = new Vector2(walkDirectionVector.x * moveSpeed, rb.velocity.y);
             }else rb.velocity = Vector2.zero;
         }else rb.velocity = Vector2.zero;
 

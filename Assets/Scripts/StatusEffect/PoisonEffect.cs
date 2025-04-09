@@ -1,6 +1,4 @@
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.Rendering;
 
 [CreateAssetMenu(fileName = "New Poison Effect", menuName = "Buffs/Effects/Poison")]
 public class PoisonEffect : EffectBuff

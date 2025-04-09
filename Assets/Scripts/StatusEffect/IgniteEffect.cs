@@ -1,6 +1,4 @@
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.Rendering;
 
 [CreateAssetMenu(fileName = "New Ignite Effect", menuName = "Buffs/Effects/Ignite")]
 public class IgniteEffect : EffectBuff

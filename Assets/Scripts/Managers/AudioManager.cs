@@ -44,9 +44,17 @@ public class AudioManager : MonoBehaviour
     {
         SFXSource.PlayOneShot(clip);
     }
-    public void TurnOffSound()
+    public void ToggleSound()
     {
-        m_Source.volume = 0;
-        SFXSource.volume = 0;
+        if(m_Source.volume == 0 && SFXSource.volume == 0)
+        {
+            m_Source.volume = 1;
+            SFXSource.volume = 1;
+        }
+        else
+        {
+            m_Source.volume = 0;
+            SFXSource.volume = 0;
+        }
     }
 }

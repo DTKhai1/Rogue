@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class StatusEffectManager : MonoBehaviour
+public class StatusEffectManager : MonoBehaviour, IFixedUpdateObserver
 {
     [SerializeField]private List<Debuff> activeDebuffs = new List<Debuff>();
     Damageable damageable;
@@ -26,19 +26,30 @@ public class StatusEffectManager : MonoBehaviour
     {
         activeDebuffs.Remove(debuffToRemove);
     }
-    private void Update()
+    private void OnEnable()
+    {
+        UpdateManager.RegisterFixedUpdateObserver(this);
+    }
+    private void OnDisable()
+    {
+        UpdateManager.UnregisterFixedUpdateObserver(this);
+    }
+    public void ObservedFixedUpdate()
     {
         if(damageable.IsAlive)
         if(activeDebuffs.Count > 0)
         {
-            foreach(var debuff in  activeDebuffs)
-            {
-                debuff.UpdateCall();
-                if (!debuff.isEffectActive)
+            for (int i = activeDebuffs.Count - 1; i >= 0; i--)
                 {
-                    activeDebuffs.Remove(debuff);
+                    if (activeDebuffs[i] != null)
+                    {
+                        activeDebuffs[i].UpdateCall();
+                        if (!activeDebuffs[i].isEffectActive)
+                        {
+                            activeDebuffs.Remove(activeDebuffs[i]);
+                        }
+                    }
                 }
-            }
         }
     }
 }

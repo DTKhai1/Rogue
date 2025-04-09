@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnemyHealthBar : MonoBehaviour
+public class EnemyHealthBar : MonoBehaviour, IUpdateObserver
 {
     public Slider healthSlider;
 
@@ -22,18 +22,20 @@ public class EnemyHealthBar : MonoBehaviour
         healthSlider.value = SliderValueCalculator(damageable.Health, damageable.MaxHealth);
     }
 
-    private void Update()
+    public void ObservedUpdate()
     {
         healthSlider.transform.position = Camera.main.WorldToScreenPoint(target.transform.position + offset);
     }
 
     private void OnEnable()
     {
+        UpdateManager.RegisterUpdateObserver(this);
         damageable.healthChanged.AddListener(OnPlayerHealthChanged);
     }
 
     private void OnDisable()
     {
+        UpdateManager.UnregisterUpdateObserver(this);
         damageable.healthChanged.RemoveListener(OnPlayerHealthChanged);
     }
 

@@ -3,11 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovingPlatform : MonoBehaviour
+public class MovingPlatform : MonoBehaviour, IFixedUpdateObserver
 {
     public float speed;
-
-    private void FixedUpdate()
+    private void OnEnable()
+    {
+        UpdateManager.RegisterFixedUpdateObserver(this);
+    }
+    private void OnDisable()
+    {
+        UpdateManager.UnregisterFixedUpdateObserver(this);
+    }
+    public void ObservedFixedUpdate()
     {
         transform.position = new Vector2(transform.position.x + speed*Time.deltaTime, transform.position.y);
     }

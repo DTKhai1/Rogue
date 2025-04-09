@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ParallaxEffect : MonoBehaviour
+public class ParallaxEffect : MonoBehaviour, IUpdateObserver
 {
     public Camera cam;
     Transform followTarget;
@@ -29,8 +29,16 @@ public class ParallaxEffect : MonoBehaviour
         startingZ = transform.position.z;
     }
 
+    private void OnEnable()
+    {
+        UpdateManager.RegisterUpdateObserver(this);
+    }
+    private void OnDisable()
+    {
+        UpdateManager.UnregisterUpdateObserver(this);
+    }
     // Update is called once per frame
-    void Update()
+    public void ObservedUpdate()
     {
         // when the target moves, move the parallax object the same distance times a multiplier
         Vector2 newPosition = startingPosition + camMoveSinceStart * parallaxFactor;

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageTrap : MonoBehaviour
+public class DamageTrap : MonoBehaviour, IFixedUpdateObserver
 {
     public int damage;
     private bool isOnTrap;
@@ -20,7 +20,15 @@ public class DamageTrap : MonoBehaviour
         isOnTrap = false;
         target = null;
     }
-    private void Update()
+    private void OnEnable()
+    {
+        UpdateManager.RegisterFixedUpdateObserver(this);
+    }
+    private void OnDisable()
+    {
+        UpdateManager.UnregisterFixedUpdateObserver(this);
+    }
+    public void ObservedFixedUpdate()
     {
         if(isOnTrap && target != null)
         {
