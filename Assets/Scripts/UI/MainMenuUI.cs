@@ -18,6 +18,7 @@ public class MainMenuUI : MonoBehaviour
     public void StartGame()
     {
         gameManager.audioManager.PlaySFX(gameManager.audioManager.onClick);
+        gameManager.levelManager.currentLevel = 0;
         gameManager.levelManager.levelPlayed.Clear();
         playerStats.resetStat();
         buffList.allBuffs.Clear();

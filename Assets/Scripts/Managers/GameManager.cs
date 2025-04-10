@@ -47,7 +47,6 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         ChangeState(GameState.MainMenu);
-        levelManager.currentLevel = 0;
     }
 
 
