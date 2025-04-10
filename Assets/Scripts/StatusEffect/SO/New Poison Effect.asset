@@ -15,5 +15,6 @@ MonoBehaviour:
   buffName: Poison on attack
   duration: 5
   icon: {fileID: 2047992146, guid: 080cb6d98b00c2645b2c41df5f69bc78, type: 3}
+  price: 20
   poisonDamage: 5
   tickInterval: 0.5

@@ -589,6 +589,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1610692707}
     - target: {fileID: 3840630469333556153, guid: ad805e05d7576b043bf218ec919d743c, type: 3}
+      propertyPath: playerStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 41212740ae6fbaf41b605875c57a09b8, type: 2}
+    - target: {fileID: 3840630469333556153, guid: ad805e05d7576b043bf218ec919d743c, type: 3}
       propertyPath: levelManager
       value: 
       objectReference: {fileID: 11400000, guid: f060790dd76792049889809a642f9e2d, type: 2}

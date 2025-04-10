@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PlayerStats", menuName = "ScriptableObject/PlayerStats")]
 public class PlayerStats : ScriptableObject
 {
+    [SerializeField] private int gold;
     [SerializeField] private int baseHealth = 150;
     [SerializeField] private int currentHealth;
 
@@ -29,10 +30,19 @@ public class PlayerStats : ScriptableObject
             damageMultiplier = value;
         }    
     }
+    public int Gold
+    {
+        get { return gold; }
+        set
+        {
+            gold = value;
+        }
+    }
     public void resetStat()
     {
         DamageMultiplier = 1f;
         healthBonus = 1f;
         currentHealth = CurrentMaxHealth;
+        gold = 0;
     }
 }

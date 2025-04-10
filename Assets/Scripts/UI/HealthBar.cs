@@ -7,16 +7,20 @@ public class HealthBar : MonoBehaviour
 {
     public Slider healthSlider;
     public TMP_Text healthText;
+    public TMP_Text goldQuantity;
 
     Player playerDamageable;
+    GameManager gameManager;
 
     void Start()
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        playerDamageable = player.GetComponent<Player>();
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        playerDamageable = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         healthSlider.value = SliderValueCalculator(playerDamageable.Health, playerDamageable.MaxHealth);
         healthText.text = playerDamageable.Health.ToString();
         playerDamageable.healthChanged.AddListener(OnPlayerHealthChanged);
+        UpdateGold(gameManager.playerStats.Gold);
+        gameManager.goldUpdate.AddListener(UpdateGold);
     }
 
 
@@ -29,5 +33,9 @@ public class HealthBar : MonoBehaviour
     {
         healthText.text = newHealth.ToString();
         healthSlider.value = SliderValueCalculator(playerDamageable.Health, playerDamageable.MaxHealth);
+    }
+    public void UpdateGold(int gold)
+    {
+        goldQuantity.text = gold.ToString();
     }
 }

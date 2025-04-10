@@ -14,11 +14,11 @@ public class ShopMenuUI : MonoBehaviour
     public Image[] buffSelectImage;
     public TMP_Text[] buffSelectText;
 
-    AudioManager audioManager;
+    GameManager gameManager;
     private void Awake()
     {
         availableBuffs = new List<Buff>(buffList.allBuffs);
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
     }
 
     private void OnEnable()
@@ -32,8 +32,7 @@ public class ShopMenuUI : MonoBehaviour
         for (int i = 0; i < buffSelectButton.Length; i++)
         {
             int index = i; // Needed for closure
-            buffSelectButton[i].onClick.AddListener(() => { SelectBuff(index);
-                                                            DestroyButton(index);}
+            buffSelectButton[i].onClick.AddListener(() => { SelectBuff(index);}
             );
         }
     }
@@ -55,32 +54,31 @@ public class ShopMenuUI : MonoBehaviour
         for (int i = 0; i < currentOptions.Count; i++)
         {
             buffSelectImage[i].sprite = currentOptions[i].icon;
-            buffSelectText[i].text = currentOptions[i].buffName;
+            buffSelectText[i].text = currentOptions[i].price.ToString();
         }
     }
 
     private void SelectBuff(int index)
     {
-        audioManager.PlaySFX(audioManager.onClick);
+        gameManager.audioManager.PlaySFX(gameManager.audioManager.onClick);
         if (index >= 0 && index < currentOptions.Count)
         {
-            player.AddBuff(currentOptions[index]);
-            if (currentOptions[index] is EffectBuff effectBuff)
+            if (gameManager.playerStats.Gold >= currentOptions[index].price)
             {
-                player.AddAttackEffect(effectBuff);
+                player.AddBuff(currentOptions[index]);
+                gameManager.playerStats.Gold -= currentOptions[index].price;
+                gameManager.goldUpdate.Invoke(gameManager.playerStats.Gold);
+                if (currentOptions[index] is EffectBuff effectBuff)
+                {
+                    player.AddAttackEffect(effectBuff);
+                }
+                else if (currentOptions[index] is StatBuff statBuff)
+                {
+                    statBuff.stats = player.stats;
+                    statBuff.ApplyBuff(player.gameObject);
+                }
+                buffSelectButton[index].gameObject.transform.parent.gameObject.SetActive(false);
             }
-            else if (currentOptions[index] is StatBuff statBuff)
-            {
-                statBuff.stats = player.stats;
-                statBuff.ApplyBuff(player.gameObject);
-            }
-        }
-    }
-    private void DestroyButton(int index)
-    {
-        if(index >= 0 && index <= currentOptions.Count)
-        {
-            buffSelectButton[index].gameObject.transform.parent.gameObject.SetActive(false);
         }
     }
 

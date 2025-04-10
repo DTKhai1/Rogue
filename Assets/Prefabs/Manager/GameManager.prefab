@@ -3420,6 +3420,10 @@ MonoBehaviour:
   enemyManager: {fileID: 11400000, guid: de05de40be41ae84c8e025ab1a369b18, type: 2}
   levelManager: {fileID: 11400000, guid: f060790dd76792049889809a642f9e2d, type: 2}
   audioManager: {fileID: 7717605631519110677}
+  playerStats: {fileID: 11400000, guid: 41212740ae6fbaf41b605875c57a09b8, type: 2}
+  goldUpdate:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &9196020514923309330
 MonoBehaviour:
   m_ObjectHideFlags: 0

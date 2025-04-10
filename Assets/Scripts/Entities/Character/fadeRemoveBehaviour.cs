@@ -1,6 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class fadeRemoveBehaviour : StateMachineBehaviour
 {
@@ -11,7 +11,8 @@ public class fadeRemoveBehaviour : StateMachineBehaviour
     Color startColor;
 
     public GameObject heartDrop;
-    [System.NonSerialized] private float heartDropRate = 0.2f;
+    [NonSerialized] private float heartDropRate = 0.2f;
+    [NonSerialized] private float goldDropProbability = 0.5f;
 
     private GameManager gameManager;
     private GameInitializer gameInitializer;
@@ -43,6 +44,8 @@ public class fadeRemoveBehaviour : StateMachineBehaviour
                 float dropGacha = Random.Range(0.0f, 1.0f);
                 if (dropGacha <= heartDropRate) Instantiate(heartDrop, objToRemove.transform.position, Quaternion.identity);
                 gameManager.enemyManager.enemyCounter--;
+                gameManager.playerStats.Gold += (dropGacha < goldDropProbability) ? 2 : 1;
+                gameManager.goldUpdate.Invoke(gameManager.playerStats.Gold);
                 if (gameManager.enemyManager.enemyCounter == 0 && gameManager.enemyManager.IsSpawnerActive()) gameInitializer.ShowChest();
             }
             if (objToRemove.CompareTag("Player"))

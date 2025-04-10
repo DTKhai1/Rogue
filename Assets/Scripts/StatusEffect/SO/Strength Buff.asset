@@ -15,5 +15,6 @@ MonoBehaviour:
   buffName: Strength
   duration: 0
   icon: {fileID: -214298916, guid: 080cb6d98b00c2645b2c41df5f69bc78, type: 3}
+  price: 10
   stats: {fileID: 11400000, guid: 41212740ae6fbaf41b605875c57a09b8, type: 2}
   type: 1

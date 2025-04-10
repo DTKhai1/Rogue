@@ -597,7 +597,7 @@ MonoBehaviour:
   _health: 0
   _isAlive: 1
   isInvisible: 0
-  invisibiltyTime: 0.25
+  invisibiltyTime: 0.12
 --- !u!114 &-6620127117275911357
 MonoBehaviour:
   m_ObjectHideFlags: 0

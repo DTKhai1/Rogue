@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b1f329f643ac44c84d2fd2f247a967, type: 3}
   m_Name: PlayerStats
   m_EditorClassIdentifier: 
+  gold: 165
   baseHealth: 150
-  currentHealth: 3925
-  damageMultiplier: 1
-  healthBonus: 1
+  currentHealth: 240
+  damageMultiplier: 2.0000002
+  healthBonus: 1.6000001

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public enum GameState
@@ -25,6 +26,8 @@ public class GameManager : MonoBehaviour
     public LevelManager levelManager;
     public AudioManager audioManager;
 
+    public PlayerStats playerStats;
+    public UnityEvent<int> goldUpdate;
 
     private void Awake()
     {
