@@ -1,4 +1,4 @@
-DTKhai1 and HolyKrabs are the same person, just forgot to change account on VS :)  
+DTKhai1 and HolyKrabs are the same person, just forgot & lazy to change account on VS :)  
 Player control setting:  
 Move: A,D  
 Jump: Space  
