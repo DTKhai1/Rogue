@@ -6,5 +6,6 @@ public abstract class Buff : ScriptableObject
     public float duration;
     public Sprite icon;
     public int price;
+    public string description;
     public abstract void ApplyBuff(GameObject target);
 }

@@ -22,6 +22,7 @@ public class MainMenuUI : MonoBehaviour
         gameManager.levelManager.levelPlayed.Clear();
         playerStats.resetStat();
         buffList.allBuffs.Clear();
+        gameManager.gameObject.GetComponent<BuffListDisplay>().DisplayBuffs();
         gameManager.levelManager.ChestLeft = 0;
         gameManager.GoToNextLevel(gameManager.levelManager.CombatMin, gameManager.levelManager.CombatMax);
     }

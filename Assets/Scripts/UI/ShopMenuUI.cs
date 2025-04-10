@@ -15,10 +15,12 @@ public class ShopMenuUI : MonoBehaviour
     public TMP_Text[] buffSelectText;
 
     GameManager gameManager;
+    private BuffListDisplay buffListDisplay;
     private void Awake()
     {
         availableBuffs = new List<Buff>(buffList.allBuffs);
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        buffListDisplay = GameObject.FindGameObjectWithTag("GameManager").GetComponent<BuffListDisplay>();
     }
 
     private void OnEnable()
@@ -77,6 +79,7 @@ public class ShopMenuUI : MonoBehaviour
                     statBuff.stats = player.stats;
                     statBuff.ApplyBuff(player.gameObject);
                 }
+                buffListDisplay.DisplayBuffs();
                 buffSelectButton[index].gameObject.transform.parent.gameObject.SetActive(false);
             }
         }

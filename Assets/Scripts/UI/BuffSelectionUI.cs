@@ -16,11 +16,13 @@ public class BuffSelectionUI : MonoBehaviour
     public TMP_Text[] buffSelectText;
 
     private GameManager gameManager;
+    private BuffListDisplay buffListDisplay;
     private GameObject gameInitiator;
     private void Awake()
     {
         availableBuffs = new List<Buff>(buffList.allBuffs);
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        buffListDisplay = GameObject.FindGameObjectWithTag("GameManager").GetComponent<BuffListDisplay>();
         gameInitiator = GameObject.FindGameObjectWithTag("GameInitiator");
     }
 
@@ -74,6 +76,7 @@ public class BuffSelectionUI : MonoBehaviour
                 statBuff.stats = player.stats;
                 statBuff.ApplyBuff(player.gameObject);
             }
+            buffListDisplay.DisplayBuffs();
         }
         gameManager.levelManager.ChestLeft--;
         if(gameManager.levelManager.ChestLeft == 0)
