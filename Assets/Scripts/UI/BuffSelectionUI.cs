@@ -85,8 +85,7 @@ public class BuffSelectionUI : MonoBehaviour
                 nonMobsGameInitializer.OpenPortal();
             }
         }
-        gameObject.SetActive(false);
-        gameObject.transform.parent.gameObject.SetActive(false);
+        Destroy(gameObject.transform.parent.gameObject);
     }
     public void ShowBuffSelection()
     {

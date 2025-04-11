@@ -6,5 +6,6 @@ public class TriggerChest : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         chest.SetActive(true);
+        Destroy(gameObject);
     }
 }

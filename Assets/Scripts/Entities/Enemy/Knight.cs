@@ -112,7 +112,7 @@ public class Knight : MonoBehaviour, IUpdateObserver, IFixedUpdateObserver
     }
     public void ObservedFixedUpdate()
     {
-        if (!damageable.LockVelocity)
+        if (!damageable.LockVelocity && touchingDirections.IsGrounded)
         {
             if (FoundPlayer)
             {
@@ -142,8 +142,8 @@ public class Knight : MonoBehaviour, IUpdateObserver, IFixedUpdateObserver
                 }
                 else
                     rb.velocity = new Vector2(walkDirectionVector.x * moveSpeed, rb.velocity.y);
-            }else rb.velocity = Vector2.zero;
-        }else rb.velocity = Vector2.zero;
+            }else rb.velocity = new Vector2(0, rb.velocity.y);
+        }else rb.velocity = new Vector2(0, rb.velocity.y);
 
 
     }

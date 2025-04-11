@@ -22,6 +22,7 @@ public class SpawnEnable : MonoBehaviour
             {
                 point.SetActive(true);
             }
+            Destroy(gameObject);
         }
     }
 }

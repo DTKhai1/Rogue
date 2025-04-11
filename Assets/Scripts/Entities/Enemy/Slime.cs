@@ -164,8 +164,8 @@ public class Slime : MonoBehaviour, IUpdateObserver, IFixedUpdateObserver
                 {
                     rb.velocity = new Vector2(walkDirectionVector.x * moveSpeed, rb.velocity.y);
                 }
-            }else rb.velocity = Vector2.zero;
-        }else rb.velocity = Vector2.zero;
+            }else rb.velocity = new Vector2(0, rb.velocity.y);
+        }else rb.velocity = new Vector2(0, rb.velocity.y);
 
     }
     
