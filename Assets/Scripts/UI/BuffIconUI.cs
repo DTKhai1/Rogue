@@ -1,8 +1,6 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
-using Unity.VisualScripting;
 
 public class BuffIconUI : MonoBehaviour
 {

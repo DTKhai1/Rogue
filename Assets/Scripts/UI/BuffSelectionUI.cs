@@ -1,8 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class BuffSelectionUI : MonoBehaviour
@@ -33,10 +31,9 @@ public class BuffSelectionUI : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        // Add click listeners to buttons
         for (int i = 0; i < buffSelectButton.Length; i++)
         {
-            int index = i; // Needed for closure
+            int index = i; 
             buffSelectButton[i].onClick.AddListener(() => SelectBuff(index));
         }
     }
@@ -45,7 +42,6 @@ public class BuffSelectionUI : MonoBehaviour
     {
         currentOptions.Clear();
 
-        // Get 3 random unique buffs
         for (int i = 0; i < 3 && availableBuffs.Count > 0; i++)
         {
             int randomIndex = Random.Range(0, availableBuffs.Count);
@@ -92,8 +88,6 @@ public class BuffSelectionUI : MonoBehaviour
         gameObject.SetActive(false);
         gameObject.transform.parent.gameObject.SetActive(false);
     }
-
-    // Call this method when level is cleared
     public void ShowBuffSelection()
     {
         GenerateBuffOptions();

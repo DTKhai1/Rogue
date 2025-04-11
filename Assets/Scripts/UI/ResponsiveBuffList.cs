@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class ResponsiveBuffList : MonoBehaviour
 {
-    [Header("Layout Settings")]
     [SerializeField] private GridLayoutGroup gridLayout;
     [SerializeField] private float minCellSize = 80f;
     [SerializeField] private float maxCellSize = 120f;

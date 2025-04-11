@@ -11,8 +11,8 @@ public class PoisonEffect : EffectBuff
         if (debuffManager != null)
         {
             var poisonDebuff = CreateInstance<PoisonDebuff>();
-            poisonDebuff.poisonDamage = poisonDamage; // Transfer poisonDamage value
-            poisonDebuff.tickInterval = tickInterval; // Transfer tickInterval value
+            poisonDebuff.poisonDamage = poisonDamage;
+            poisonDebuff.tickInterval = tickInterval;
             poisonDebuff.duration = duration;
             debuffManager.AddDebuff(poisonDebuff);
         }

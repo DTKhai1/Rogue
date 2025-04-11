@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Strength Buff", menuName = "Buffs/Effects/Strength")]

@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -30,10 +29,9 @@ public class ShopMenuUI : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        // Add click listeners to buttons
         for (int i = 0; i < buffSelectButton.Length; i++)
         {
-            int index = i; // Needed for closure
+            int index = i; 
             buffSelectButton[i].onClick.AddListener(() => { SelectBuff(index);}
             );
         }
@@ -43,7 +41,6 @@ public class ShopMenuUI : MonoBehaviour
     {
         currentOptions.Clear();
 
-        // Get 3 random unique buffs
         for (int i = 0; i < 3 && availableBuffs.Count > 0; i++)
         {
             int randomIndex = Random.Range(0, availableBuffs.Count);

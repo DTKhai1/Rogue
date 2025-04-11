@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Ignite Debuff", menuName = "Debuffs/Ignite")]

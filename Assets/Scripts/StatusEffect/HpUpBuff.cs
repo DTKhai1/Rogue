@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "HP up", menuName = "Buffs/Effects/HpUp")]
