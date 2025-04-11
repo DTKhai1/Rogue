@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class AudioManager : MonoBehaviour
 {
     [Header("--------AudioSource------")]
-    [SerializeField] AudioSource m_Source;
-    [SerializeField] AudioSource SFXSource;
+    public AudioSource m_Source;
+    public AudioSource SFXSource;
 
     [Header("--------AudioClip-------")]
     public AudioClip backGroundNorm;
